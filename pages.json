@@ -1,0 +1,129 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		//登录页页面
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"bounce": "none", //关掉回弹属性
+					"contentAdjust": false //解决ios第一次打开白条
+				}
+			}
+		},
+		//首页
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"bounce": "none", //关掉回弹属性
+					"contentAdjust": false //解决ios第一次打开白条
+				}
+			}
+		},
+		{
+			"path" : "pages/work/work",
+			"style" : {
+				"navigationBarTitleText": "工作",
+				"app-plus": {
+					"bounce": "none" ,//关掉回弹属性
+					"titleNView": {
+						// "buttons": [{
+						// 	"text": "\ue7b0",
+						// 	"fontSrc": "/static/iconfont/iconfont.ttf",
+						// 	"fontSize": "22px",
+						// 	"color":"#3096FA"
+							
+						// }],
+						// "splitLine": {
+						// 	"color": "#e8e8e8"
+						// }
+					}
+				}
+			}
+		},
+		//配置工作台页面
+		{
+			"path": "pages/work/platformconfig",
+			"style": {
+				"navigationBarTitleText": "配置工作台",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "保存",
+							"fontSize": "16px",
+							"color": "#3096FA"
+						}],
+						"splitLine": {
+							"color": "#e8e8e8"
+						}
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "个人",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"app-plus": {
+					"bounce": "none" //关掉回弹属性
+				}
+			}
+		},
+	    {
+            "path" : "pages/registered/registered",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册账户信息",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+			"path": "pages/mine/u-avatar-cropper",
+			"style": {
+				"navigationBarTitleText": "头像裁剪",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#bbbbbb",
+		"selectedColor": "#A21C50",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"iconWidth": "26px",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tarbar/index.png",
+				"selectedIconPath": "static/tarbar/indexSel.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/work/work",
+				"iconPath": "static/tarbar/workbench.png",
+				"selectedIconPath": "static/tarbar/workbenchSel.png",
+				"text": "工作台"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/tarbar/me.png",
+				"selectedIconPath": "static/tarbar/meSel.png",
+				"text": "个人"
+			}
+		]
+	}
+}
